@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { SvgIcon } from '../svg-icon/svg-icon';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [],
+  imports: [SvgIcon],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.scss',
 })
-export class Sidebar {
-
-}
+export class Sidebar {}

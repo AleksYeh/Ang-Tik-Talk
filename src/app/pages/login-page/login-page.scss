@@ -29,3 +29,7 @@
   border: none;
   cursor: pointer;
 }
+
+.password-eye-btn.active {
+  color: var(--primary-color);
+}

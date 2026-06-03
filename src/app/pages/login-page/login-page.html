@@ -16,7 +16,11 @@
         [type]="isPasswordVisible() ? 'text' : 'password'"
         placeholder="Введите пароль"
       />
-      <button class="password-eye-btn" (click)="isPasswordVisible.set(!isPasswordVisible())">
+      <button
+        class="password-eye-btn"
+        [class.active]="isPasswordVisible()"
+        (click)="isPasswordVisible.set(!isPasswordVisible())"
+      >
         <svg
           width="20"
           height="20"
