@@ -18,10 +18,13 @@
 }
 
 body {
+  height: 100dvh;
   font-family: 'JetVrains Mono', sans-serif;
   background: var(--dark-color);
   color: var(--light-color);
   background-image: url(/assets/imgs/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .skill-tag {
@@ -69,6 +72,13 @@ body {
   font-size: 48px;
   line-height: 56px;
   font-weight: 800;
+}
+
+.h4 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 32px;
 }
 
 .h6 {
