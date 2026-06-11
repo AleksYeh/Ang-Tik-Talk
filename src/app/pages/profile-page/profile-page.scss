@@ -4,16 +4,72 @@
   justify-content: space-between;
 }
 
-.to-settings-icon {
-  width: 16px;
-  height: 16px;
-  color: var(--dark-color);
-  gap: 12px;
-}
-
 .to-settings-btn {
   display: flex;
   align-items: center;
   width: 190px;
   text-decoration: none;
+  align-items: center;
+  gap: 12px;
+}
+
+.to-settings-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--dark-color);
+}
+
+.profile-page__body {
+  display: grid;
+  grid-gap: 64px;
+  grid-template-columns: 1fr 350px;
+}
+
+.subscribers-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.subscriber-avatar-btn {
+  border-radius: 50%;
+
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+}
+
+.to-subscribers-search {
+  border-radius: 50%;
+  background: var(--light-color);
+  width: 14px;
+  height: 14px;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 8px;
+    background: var(--dark-color);
+    left: 45%;
+    top: 50%;
+  }
+
+  &:before {
+    transform: translateY(-45%) translateX(-50%);
+  }
+
+  &:after {
+    transform: translateY(-50%) translateX(-44%) rotate(90deg);
+  }
+}
+
+.stack-wrapper {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
 }
