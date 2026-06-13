@@ -8,7 +8,8 @@
   </header>
 
   <main class="profile-page__body">
-    <div></div>
+    <app-post-feed></app-post-feed>
+
     <div>
       <h3 class="h6 mb16">Подписчики</h3>
       <div class="subscribers-wrapper mb32">
@@ -22,24 +23,12 @@
 
       <h3 class="h6 mb16">Навыки</h3>
       <div class="stack-wrapper mb32">
-        @for (
-          skill of [
-            '123',
-            '123123',
-            '123',
-            '123123',
-            '123',
-            '123123',
-            '123',
-            '123123',
-            '123',
-            '123123',
-          ];
-          track skill
-        ) {
+        @for (skill of ['123']; track skill) {
           <div class="skill-tag">{{ skill }}</div>
         }
       </div>
+      <h3 class="h6 mb16">О себе</h3>
+      <p class="medium-text">{{ profile.description }}</p>
     </div>
   </main>
 }
