@@ -8,10 +8,11 @@ import {
 } from '@angular/forms';
 import { ProfileService } from '../../data/services/profile';
 import { firstValueFrom } from 'rxjs';
+import { AvatarUpload } from './avatar-upload/avatar-upload';
 
 @Component({
   selector: 'app-settings-page',
-  imports: [ProfileHeader, ɵInternalFormsSharedModule, ReactiveFormsModule],
+  imports: [ProfileHeader, ɵInternalFormsSharedModule, ReactiveFormsModule, AvatarUpload],
   templateUrl: './settings-page.html',
   styleUrl: './settings-page.scss',
 })
