@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { Profile } from '../../data/services/interfaces/profile.interface';
 import { ProfileService } from '../../data/services/profile';
 import { ProfileCard } from '../../common-ui/profile-card/profile-card';
 import { ProfileFilters } from './profile-filters/profile-filters';
@@ -12,11 +11,7 @@ import { ProfileFilters } from './profile-filters/profile-filters';
 })
 export class SearchPage {
   profileService = inject(ProfileService);
-  profiles: Profile[] = [];
+  profiles = this.profileService.filteredProfiles;
 
-  constructor() {
-    this.profileService.getTestAccounts().subscribe((val) => {
-      this.profiles = val;
-    });
-  }
+  constructor() {}
 }
