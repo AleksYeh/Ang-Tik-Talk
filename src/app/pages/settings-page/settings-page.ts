@@ -17,8 +17,8 @@ import { AvatarUpload } from './avatar-upload/avatar-upload';
   styleUrl: './settings-page.scss',
 })
 export class SettingsPage {
-  fb = inject(FormBuilder);
-  profileService = inject(ProfileService);
+  private readonly fb = inject(FormBuilder);
+  private readonly profileService = inject(ProfileService);
 
   @ViewChild(AvatarUpload) avatarUploader!: AvatarUpload;
 

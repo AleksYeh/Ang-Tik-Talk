@@ -16,13 +16,13 @@ import { PostFeed } from './post-feed/post-feed';
   styleUrl: './profile-page.scss',
 })
 export class ProfilePage {
-  profileService = inject(ProfileService);
-  route = inject(ActivatedRoute);
+  private readonly profileService = inject(ProfileService);
+  private readonly route = inject(ActivatedRoute);
 
-  me$ = toObservable(this.profileService.me);
-  subscribers$ = this.profileService.getSubscribersShortList(5);
+  readonly me$ = toObservable(this.profileService.me);
+  readonly subscribers$ = this.profileService.getSubscribersShortList(5);
 
-  profile$ = this.route.params.pipe(
+  readonly profile$ = this.route.params.pipe(
     switchMap(({ id }) => {
       if (id === 'me') return this.me$;
       return this.profileService.getAccount(id);

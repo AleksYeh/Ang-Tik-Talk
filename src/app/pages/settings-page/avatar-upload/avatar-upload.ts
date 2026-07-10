@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './avatar-upload.scss',
 })
 export class AvatarUpload {
-  preview = signal<string>('/assets/imgs/avatar-placeholder');
+  readonly preview = signal<string>('/assets/imgs/avatar-placeholder');
 
   avatar: File | null = null;
 

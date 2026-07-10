@@ -10,7 +10,7 @@ import { ProfileFilters } from './profile-filters/profile-filters';
   styleUrl: './search-page.scss',
 })
 export class SearchPage {
-  profileService = inject(ProfileService);
+  private readonly profileService = inject(ProfileService);
   profiles = this.profileService.filteredProfiles;
 
   constructor() {}

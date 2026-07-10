@@ -8,12 +8,11 @@ import { map, tap } from 'rxjs';
   providedIn: 'root',
 })
 export class ProfileService {
-  http = inject(HttpClient);
+  private readonly http = inject(HttpClient);
+  private readonly baseApiUrl = 'https://icherniakov.ru/yt-course/';
 
-  me = signal<Profile | null>(null);
-  filteredProfiles = signal<Profile[]>([]);
-
-  baseApiUrl = 'https://icherniakov.ru/yt-course/';
+  readonly me = signal<Profile | null>(null);
+  readonly filteredProfiles = signal<Profile[]>([]);
 
   getMe() {
     return this.http

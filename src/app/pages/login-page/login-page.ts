@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
   styleUrl: './login-page.scss',
 })
 export class LoginPage {
-  authService = inject(Auth);
-  router = inject(Router);
+  private readonly authService = inject(Auth);
+  private readonly router = inject(Router);
 
   isPasswordVisible = signal<boolean>(false);
 

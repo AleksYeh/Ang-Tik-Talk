@@ -11,10 +11,10 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   styleUrl: './profile-filters.scss',
 })
 export class ProfileFilters {
-  fb = inject(FormBuilder);
-  profileService = inject(ProfileService);
+  private readonly fb = inject(FormBuilder);
+  private readonly profileService = inject(ProfileService);
 
-  searchForm = this.fb.group({
+  readonly searchForm = this.fb.group({
     firstName: [''],
     lastName: [''],
     stack: [''],
