@@ -14,11 +14,8 @@ export class AvatarUpload {
 
   avatar: File | null = null;
 
-  fileBrouserHandler(event: Event) {
-    //@ts-ignore
-
-    const file: FileList = (event.target as HTMLInputElement)?.files?.[0];
-    //@ts-ignore
+  fileBrowserHandler(event: Event) {
+    const file: FileList | File | null = (event.target as HTMLInputElement)?.files?.[0] ?? null;
 
     this.processFile(file);
   }
@@ -26,8 +23,7 @@ export class AvatarUpload {
     this.processFile(file);
   }
 
-  processFile(file: File | null | undefined) {
-    //@ts-ignore
+  private processFile(file: File | null | undefined) {
     if (!file || !file.type.match('image')) return;
 
     const reader = new FileReader();
@@ -35,7 +31,7 @@ export class AvatarUpload {
     reader.onload = (event) => {
       this.preview.set(event.target?.result?.toString() ?? '');
     };
-    //@ts-ignore
+
     reader.readAsDataURL(file);
     this.avatar = file;
   }

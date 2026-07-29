@@ -22,7 +22,7 @@ export class LoginPage {
 
   onSubmit() {
     if (this.form.valid) {
-      //@ts-ignore
+      // @ts-ignore
       this.authService.login(this.form.value).subscribe((res) => {
         this.router.navigate(['']);
         console.log(res);
